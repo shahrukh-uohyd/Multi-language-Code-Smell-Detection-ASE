@@ -14,7 +14,6 @@ import mlssdd.codesmells.detection.repository.UnusedImplementationDetectionModif
 
 import mlssdd.antipatterns.detection.IAntiPatternDetection;
 import mlssdd.antipatterns.detection.repository.ExcessiveInterLanguageCommunicationDetection;
-import mlssdd.antipatterns.detection.repository.EILCModifiedForRocksdb;
 import mlssdd.antipatterns.detection.repository.TooMuchClusteringDetectionModified;
 import mlssdd.antipatterns.detection.repository.TooMuchScatteringDetectionModified;
 import mlssdd.codesmells.detection.ICodeSmellDetection;
@@ -29,9 +28,6 @@ import mlssdd.codesmells.detection.repository.NotUsingRelativePathDetection;
 import mlssdd.codesmells.detection.repository.PassingExcessiveObjectsDetection;
 import mlssdd.codesmells.detection.repository.UnusedDeclarationDetectionModified;
 import mlssdd.codesmells.detection.repository.UnusedParametersDetectionModified;
-
-import mlssdd.codesmells.detection.repository.NotUsingSafePoints;
-//import mlssdd.github.git.CloneRepository;
 import mlssdd.utils.CreateXml;
 
 public class DetectCodeSmellsAndAntiPatterns {
@@ -39,15 +35,12 @@ public class DetectCodeSmellsAndAntiPatterns {
    
 
     public static void main(String[] argumnets) {
-         File folder = new File("/home/shahrukh/smellDetection/Detection/cloned projects");
+         File folder = new File("/home/shahrukh/smellDetection/Detection/cloned projects"); //path to the cloned projects
      File[] files1 = folder.listFiles();
-    // // // //System.out.println(files1.length);
-    for(int f=10; f<files1.length;f++)
+    for(int f=0; f<files1.length;f++)
     {
       String Fname =  files1[f].getName();
-     //String Fname = "rocksdb-8.3.2";
-      System.out.println(Fname);
-    Document xml = CreateXml.parseSingleDocument("/home/shahrukh/smellDetection/Detection/cloned projects/"+Fname);
+      Document xml = CreateXml.parseSingleDocument("/home/shahrukh/smellDetection/Detection/cloned projects/"+Fname); //path to the cloned projects+proejct name
                 
                 final long start = System.currentTimeMillis();
                 final Set<ICodeSmellDetection> codeSmellDetectors = new HashSet<>();
@@ -89,19 +82,16 @@ public class DetectCodeSmellsAndAntiPatterns {
                     //     final String[] parts = project.split("[\\/\\\\]");
                     //     bareName = parts[parts.length - 1];
                     // }
-                    final String dir = "results/NotUsingSafePoints_new";
+                    final String dir = "results/AssumingSafeMultiLanguageReturnValues"; //folder name (code smell name) to store results
                     final String fullPath = dir + "/" + bareName + ".csv";
 
                     if (new File(dir).mkdirs()) {
                         System.out.println("Directory " + dir + " created");
                     }
 
-                    // System.out.println(bareName);
-                    // System.out.println(project);
-                    // System.out.println();
+                    
 
-                    // FileWriter(..., false): no auto-append, write at the beginning of the file
-                    // PrintWriter(..., false): no autoflush for performance reason
+                   
                     final PrintWriter outputWriter = new PrintWriter(
                             new BufferedWriter(new FileWriter(fullPath, false)),
                             false);
