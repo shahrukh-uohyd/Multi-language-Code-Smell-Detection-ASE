@@ -1,0 +1,15 @@
+Project,JNI Files,% of affected files EILC,TMC,TMS,UNMD,UNMI,UP,ASMRV,HCL,LRA,MMM,NCOE,NHE,NSL,NURP,PEO
+conscrypt-master,1,100,0,0,0,100,0,0,0,100,100,0,100,100,100,0
+java-smt-master,3,100,300,0,200,300,0,0,0,0,100,0,100,0,0,0
+javacpp-master,20,65,300,1800,1000,0,0,0,0,0,0,0,0,100,0,0
+jpype-master,5,40,0,200,0,100,100,0,0,300,1000,0,800,100,0,0
+pljava-master,23,17.3913043478261,100,1700,100,800,0,100,0,0,100,0,100,0,0,0
+realm-java-main,49,30.6122448979592,300,2100,100,1300,100,0,0,100,0,0,400,100,0,0
+rocksdb-8.3.2,87,17.24,0,4400,0,5700,0,100,300,0,100,0,0,300,100,0
+vlc-android-master,11,18.1818181818182,0,0,100,0,0,100,0,0,100,0,100,100,100,0
+zstd-jni-master,10,60,100,400,100,100,100,0,0,0,100,600,800,0,0,0
+,,,,,,,,,,,,,,,,
+WEIGHTED AVG,209,29.1866028708134,5.26,50.72,7.66,40.19,1.44,1.44,1.44,2.39,7.66,2.87,11.48,3.83,1.44,0
+(SMELLY percentage * TOTAL FILES)/SUM TOTAL FILES OF EACH PROJECT,,,,,,,,,,,,,,,,
+(smelly/total)*100*total / sum total of each project,,,,,,,,,,,,,,,,
+smelly*100/sum total of each project,,,,,,,,,,,,,,,,
