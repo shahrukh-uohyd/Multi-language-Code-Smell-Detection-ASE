@@ -64,8 +64,8 @@ percentage_of_smelly_files_affected_by_each_smell_new_data.csv
 
 5. Documentation
 
-A detailed description of all folders, scripts, and instructions for reproducing the study is provided in:
+A detailed description of all folders, codes, and instructions for reproducing the study is provided in:
 
-👉 ReplicationUtilities.txt
+ReplicationUtilities.pdf
 
 This document includes the complete replication procedure, setup steps, and execution instructions.
